@@ -1,3 +1,5 @@
 # Fiona Ding's LaTeX Resumes
 
-* [Adapted from Pro Template by Alessandro Plasmati](https://fding253.github.io/resume/ProTemplate-AlessandroPlasmati/FD_Resume2018.pdf)
+* [My current resume](https://fding253.github.io/resume/ProTemplate-AlessandroPlasmati/FD_Resume2018.pdf), adapted from Pro Template by Alessandro Plasmati
+
+  See original template [here](https://www.sharelatex.com/templates/52fb8c0933621a613683ecac/).
