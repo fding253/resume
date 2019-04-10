@@ -1,4 +1,6 @@
-# Fiona Ding's LaTeX Resumes
+---
+title: Fiona Ding's LaTeX Resumes
+---
 
 * [My current resume](https://fding253.github.io/resume/ProTemplate-AlessandroPlasmati/FD_Resume.pdf), adapted from Pro Template by Alessandro Plasmati
 
