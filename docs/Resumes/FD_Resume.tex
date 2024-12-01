@@ -73,14 +73,14 @@ ItalicFont = Fontin-Italic.otf
 
 %% -- Versions --
 \newif\ifgen
-\newif\ifswe
-\newif\ifdata
+\newif\ifds
+\newif\ifde
 \newif\ifanalyst
 
-% set which version:
+% set which version by changing false to true:
 \genfalse
-\swefalse
-\datafalse
+\dsfalse
+\defalse
 \analystfalse
 
 %-------------WATERMARK TEST [**not part of a CV**]---------------
@@ -128,11 +128,11 @@ ItalicFont = Fontin-Italic.otf
 \ifgen
 	\emph{Fast learner with excellent problem-solving and analytical skills.}
 \fi
-\ifswe
-	\emph{Fast-learning software engineer with excellent problem-solving and analytical skills.}
+\ifds
+	\emph{Fast-learning data scientist with excellent problem-solving and analytical skills.}
 \fi
-\ifdata
-	\emph{Fast-learning data analyst with excellent problem-solving and analytical skills.}
+\ifde
+	\emph{Fast-learning data engineer with excellent problem-solving and analytical skills.}
 \fi
 \ifanalyst
 	\emph{Fast-learning data analyst with excellent problem-solving and analytical skills.}
@@ -154,8 +154,8 @@ ItalicFont = Fontin-Italic.otf
 % ----- SKILLS -----
 \section{Technical Skills}
 \begin{tabular}{rp{11cm}}
- \textsc{Computational:}& \textsc{Experienced:} Python, C/C++, SQL, Tableau, ROOT, MS Access \\
- 				 	& \textsc{Basic:} Java, UNIX, MatLab, VBA, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf} \\
+ \textsc{Programming:}& Python, SQL, C/C++, Java \\ %, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}
+ \textsc{Data Visualization:}& Tableau \\
 % \textsc{Other:}& numerical and statistical methods%, precision machine shop\\
 \end{tabular}
 
@@ -163,19 +163,26 @@ ItalicFont = Fontin-Italic.otf
 % ----- WORK EXPERIENCE -----
 \section{Work Experience}
 \begin{tabular}{rp{13cm}}
-  \textbf{Current} & \textbf{Crossover Health} \\
- 	2016--Present & \emph{Data Scientist/Reporting Analyst 1, 2} \\
+  \textbf{Current} & \textbf{Meta} \\
+  		& \emph{Data Engineer} \\
+		& 
+			\begin{itemize}
+            	\item Develop and maintain data pipelines for data assets used across the company
+			\item Build dashboards for reporting and monitoring
+			\end{itemize}\\
+  2016--2021 & \textbf{Crossover Health} \\
+		& \emph{Data Scientist/Reporting Analyst 1, 2} \\
 %	2016--2018	
 %		&	\emph{Reporting Analyst 1, 2} \\
 %	2016--2017	&	\textbf{Reporting Analyst 1} \\
 %		& \emph{Crossover Health} \\
 		& 
 			\begin{itemize}
-            \item Early member (second hire) of the Analytics team, which won the annual Big Wave award in 2016 for impact on the company
-			\item Build and implement machine learning models to predict medical outcomes and improve operational procedures
-			\item Build and maintain a data warehouse with ETL processes using SQL and Python scripts to transform data from sources such as API calls, claims data, internal sources, etc.  
-			\item Set up automation of data pipeline using Luigi
-			\item Build reports and dashboards in Tableau tailored for the intended user
+            	\item Early member (second hire) of the Analytics team, which won the annual Big Wave award in 2016 for impact on the company
+			\item Built and maintained a data warehouse with ETL processes using SQL and Python scripts to transform data from sources such as API calls, claims data, internal sources, etc.  
+			\item Built and implemented machine learning models to predict medical outcomes and improve operational procedures
+			\item Set up automation of data pipelines using Luigi
+			\item Built reports and dashboards in Tableau tailored for the intended user
 			\item Instituted many best-practice standards amongst team, e.g. version control, test suites
 			\end{itemize}\\
 	2015--2016 & \textbf{County of Santa Clara - Social Services Agency} \\
