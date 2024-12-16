@@ -1,0 +1,234 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{Simple CV}
+\author{\LaTeX{} Ninja}
+\date{2024}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Fiona}{Ding}{Data Engineer}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+% \begin{center}
+%     \roundpic{img/profile_crop.png}
+% \end{center}
+\bigskip
+
+\subsection*{About Me}
+% \bg{cvgreen}{white}{About Me}\\[0.5em]
+Data engineer with experience designing, implementing, and maintaining data pipelines to transform raw data into valuable insights. 
+% Proficient in designing, implementing, and maintaining scalable data pipelines to support business intelligence and analytics initiatives. Adept at utilizing cutting-edge technologies to optimize data processing and storage. Proven ability to collaborate with cross-functional teams, ensuring the seamless integration of data solutions to drive organizational success. 
+
+\bigskip
+
+% \bg{cvgreen}{white}{Areas of specialization} \\[0.5em]
+
+% Privateering ~•~ Bucaneering ~•~ Parler ~•~ Rum
+
+% \bigskip
+
+\subsection*{Skills}
+% \bg{cvgreen}{white}{Skills}\\[0.5em]
+Python \\
+SQL \\
+ETL \\
+Data Warehousing \\
+Tableau \\
+C/C++ \\
+Java \\
+\LaTeX \\
+\bigskip
+
+\subsection*{Hobbies}
+% \bg{cvgreen}{white}{Personal} \\[0.5em]
+badminton \\
+hapkido \\
+rock climbing \\
+piano\\
+guitar \\
+
+
+\bigskip
+
+\vspace{4em}
+
+\infobubble{\faAt}{cvgreen}{white}{\href{mailto:fding253@gmail.com}{fding253@gmail.com}}
+% \infobubble{\faTwitter}{cvgreen}{white}{@sparrow}
+% \infobubble{\faFacebook}{cvgreen}{white}{Jack Sparrow}
+\infobubble{\faGithub}{cvgreen}{white}{\href{http://www.github.com/fding253}{fding253}}
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{http://www.linkedin.com/in/fding253}{fding253}}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Work Experience}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2021--Present}{Meta}{Data Engineer}{Menlo Park, CA \color{cvorange}}{\begin{itemize}
+        \item Develop and maintain ETL processes for data assets used across the organization
+        \item Build dashboards for reporting and real-time monitoring, working closely with data scientists to understand analytics requirements
+        % \item Compliance with changing privacy regulations
+        \item Improve health of system by setting up data quality alerts to ensure accuracy and consistency of data
+        \item Optimize pipelines for faster landing times and reduced compute costs.
+        \end{itemize}
+   }{img/metalogo.jpg} \\
+    \cvevent{2016--2021}{Crossover Health}{Data Scientist}{San Clemente, CA \color{cvorange}} {
+        \begin{itemize}
+        \item Early member (second hire) of the Analytics team, which won the annual Big Wave award in 2016 for impact on the company
+        \item Built and maintained a data warehouse with ETL processes using SQL and Python scripts to transform data from sources such as API calls, claims data, internal sources, etc.  
+        % \item Built and implemented machine learning models to predict medical outcomes and improve operational procedures
+        \item Set up automation of data pipelines using Luigi
+        \item Built reports and dashboards in Tableau tailored for the intended user
+        \item Instituted many best-practice standards amongst team, e.g. version control, test suites
+		\end{itemize}
+   }{img/xologo.jpg} \\
+   
+    \cvevent{2015--2016}{County of Santa Clara - Social Services Agency}{Associate Management Analyst}{San Jose, CA \color{cvorange}}{\begin{itemize}
+%			\item Systems support for the Social Services Agency, working on various projects in the Data Analysis, Program Integrity and Research group
+		\item Designed and created a complete database from scratch, used for tracking worker registrations and statuses
+		\item Created back-end of the database, which involved data cleaning, database design, and writing SQL queries
+		\item Implemented and tested front-end application using VBA, allowing user-friendly data-entry and querying
+		\end{itemize}
+   }{img/scclogo.jpg} \\
+   
+   \cvevent{2009--2014}{University of California, Davis}{Graduate Researcher/Teaching Assistant}{Davis, CA \color{cvorange}}{\begin{itemize}
+%		\item Studied the properties of the quark-gluon plasma formed in high energy heavy-ion collisions at the STAR detector at RHIC (Relativistic Heavy Ion Collider)
+		\item Analyzed large data sets ($\sim10^8$ events), using ROOT and C++
+        \item Led lab and discussion sections of undergraduate physics courses
+		\end{itemize} 
+   }{img/ucd_logo.jpg}
+\end{tabular}
+\vspace{3em}
+
+% \begin{minipage}[t]{0.45\textwidth}
+\section*{Education}
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvdegree{2021-ongoing}{Computer Science}{M.S.}{Georgia Institute of Technology \color{headerblue}}{Part-time online program}{img/GTVertical_RGB.png} \\
+    \cvdegree{2009-2011}{Physics}{M.S.}{University of CA, Davis \color{headerblue}}{}{img/ucd_logo.jpg} \\
+    \cvdegree{2005-2009}{Physics with Math minor}{B.S.}{Carnegie Mellon University \color{headerblue}}{}{img/cmu_seal.png}
+\end{tabular}
+% \end{minipage}\hfill
+% \begin{minipage}[t]{0.22\textwidth}
+% \section*{Programming}
+% \begin{tabular}{r @{\hspace{0.5em}}l}
+%      \bg{skilllabelcolour}{iconcolour}{python} &  \barrule{0.5}{0.5em}{cvpurple}\\
+%      \bg{skilllabelcolour}{iconcolour}{SQL} & \barrule{0.4}{0.5em}{cvpurple} \\
+%      \bg{skilllabelcolour}{iconcolour}{C/C++} & \barrule{0.2}{0.5em}{cvorange} \\
+%      \bg{skilllabelcolour}{iconcolour}{Java} & \barrule{0.1}{0.5em}{cvorange} \\
+%      \bg{skilllabelcolour}{iconcolour}{\LaTeX} & \barrule{0.25}{0.5em}{cvgreen} \\
+%      % \bg{skilllabelcolour}{iconcolour}{Tableau} & \barrule{0.1}{0.5em}{cvpurple} \\
+% \end{tabular}
+% \end{minipage}
+
+% \section*{Curriculum}
+% \begin{tabular}{r| p{0.5\textwidth} c}
+%     \cvevent{2018--2021}{Captain of the Black Pearl}{Lead}{East Indies \color{cvred}}{Finally got the goddamn ship back. \lorem}{disney.png} \\
+%     \cvevent{2019}{Freelance Pirate}{Bucaneering}{Tortuga \color{cvred}}{This and that. The usual, aye?  \lorem}{medal.jpeg} \\
+% \end{tabular}
+% \vspace{3em}
+
+% \begin{minipage}[t]{0.3\textwidth}
+% \section*{Certificates \& Grants}
+% \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+%     1708 & Captain's Certificates \\
+%     1710 & Travel grant \\
+%     1715--1716 & Grant from the Pirate's Company
+% \end{tabular}
+% \bigskip
+
+% \section*{Languages}
+% \begin{tabular}{l | ll}
+% \textbf{English} & C2 & {\phantom{x}\footnotesize mother tongue} \\
+% \textbf{French} & C2 & \pictofraction{\faCircle}{cvgreen}{3}{black!30}{1}{\tiny} \\
+% \textbf{Spanish} & C2 & \pictofraction{\faCircle}{cvgreen}{1}{black!30}{3}{\tiny} \\
+% \textbf{Italian} & C2 & \pictofraction{\faCircle}{cvgreen}{3}{black!30}{1}{\tiny}
+% \end{tabular}
+% \bigskip
+
+% \end{minipage}\hfill
+% \begin{minipage}[t]{0.3\textwidth}
+% \section*{Publications}
+% \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+%     1729 & \emph{How I almost got killed by Lady Swan}, Tortuga Printing Press. \\
+%     1720 & ``Privateering for Beginners'', in: \emph{The Pragmatic Pirate} (1/1720).
+% \end{tabular}
+% \bigskip
+
+% \section*{Talks}
+% \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
+%     Nov. 1726 & ``How I lost my ship (\& and how to get it back)'', at: \emph{Annual Pirate's Conference} in Tortuga, Nov. 1726.
+% \end{tabular}
+% \end{minipage}
+
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+% \setlength{\parindent}{0pt}
+% \begin{minipage}[t]{\rightcolwidth}
+% \begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+% {\small Fiona Ding \icon{\faEnvelopeO}{cvgreen}{} fding253@gmail.com \icon{\faMapMarker}{cvgreen}{} CA, USA \icon{\faPhone}{cvgreen}{} (650)704-7189 \newline\icon{\faAt}{cvgreen}{} \protect\url{fding253.github.io}
+% }
+% \end{center}
+% \end{minipage}
+
+\end{paracol}
+
+\end{document}
